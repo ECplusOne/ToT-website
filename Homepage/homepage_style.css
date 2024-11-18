@@ -1,0 +1,135 @@
+/* Body section styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+    background-color: lightslategray;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navbar styles */
+nav {
+    background-color: lightslategray;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: block;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    transition: background-color 0.3s ease-in;
+}
+
+/*
+@media (max-width: 400px) {
+    nav ul {
+        display: none;
+    }
+
+    nav .active ul{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        top: 50px;
+        left: 0;
+        background-color: #E8E8E8;
+    }
+}
+*/
+
+/* Menu button styles */
+.menu-container {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.menu-container img{
+    width: 30px;
+    height: 30px;
+}
+
+.rotate{
+    /* Rotation animation for menu button on click */
+    transform: rotate(90deg);
+}
+
+/* Old handmade menu button */
+/*
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s ease;
+}
+*/
+
+/* Main section styles */
+main {
+    background-color: #CCCCCD;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.main-div {
+    background-color: skyblue; /* solo per distinguerlo dal resto */
+    border-radius: 25px;
+    padding: 5vw 5vh;
+}
+
+.main-div img{
+    max-width: 300px;
+    max-height: 500px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

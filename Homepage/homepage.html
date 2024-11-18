@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homepage_style.css">
+    <script src="homepage_script.js" defer></script>
     <title>Triad of Trade</title>
 </head>
 <body>
     <header>
-        
+        <h1>Triad of Trade</h1>
     </header>
 
+    <nav>
+        <div class="menu-container" onclick="menuAnimation(this); toggleMenu();">
+            <img src="../img/menu-icon.svg" alt="menu">
+        </div>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <div class="section-yami">
-
+        <div class="section-yami main-div">
+            <img src="../img/ygo-card.png" alt="ygo-card">
         </div>
 
-        <div class="section-pika">
-
+        <div class="section-pika main-div">
+            <img src="../img/pokemon-card.png" alt="pokemon-card">
         </div>
 
-        <div class="section-magic">
-
+        <div class="section-magic main-div">
+            <img src="../img/magic-card.png" alt="magic-card">
         </div>
     </main>
 </body>
