@@ -9,6 +9,8 @@ body {
 header {
     display: flex;
     position: fixed; /* Rende l'header fisso */
+    top: 0; /*Visto che abbiamo utilizzato position: fixed; Assicura che l'header sia ancorato in cima */
+    left: 0; /*Visto che abbiamo utilizzato position: fixed; Assicura che l'header sia ancorato in cima */
     padding: 10px 10px; /* Spaziatura interna */
     width: 100%; /* Occupa tutta la larghezza */
     height: 100px; /* Altezza dell'header */
@@ -38,6 +40,37 @@ header {
     max-height: 100px; /* Assicura che l'immagine non superi l'altezza dell'header */
     max-width: 120px; /* Limita la larghezza dell'immagine */
     height: auto;
+}
+
+.content-container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 100px); /* Sottrae l'altezza dell'header */
+    margin-top: 100px; /* Spazio per l'header fisso */
+}
+
+.column {
+    flex: 1;
+    height: 100%;
+    overflow: hidden; /* Previene lo scroll se l'immagine è troppo grande */
+}
+
+.column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fa in modo che l'immagine riempia tutto lo spazio mantenendo le proporzioni */
+}
+
+/* Responsive design per schermi più piccoli */
+@media screen and (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .column {
+        height: 33.33vh; /* Ogni colonna occupa un terzo dell'altezza della viewport */
+    }
 }
 
 /* Navbar styles */
@@ -77,23 +110,6 @@ nav ul li a:hover {
     transition: background-color 0.3s ease-in;
 }
 
-/*
-@media (max-width: 400px) {
-    nav ul {
-        display: none;
-    }
-
-    nav .active ul{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        top: 50px;
-        left: 0;
-        background-color: #E8E8E8;
-    }
-}
-*/
-
 .rotate{
     /* Rotation animation for menu button on click */
     transform: rotate(90deg);
@@ -110,10 +126,10 @@ nav ul li a:hover {
 }
 */
 
-/* Main section styles */
+/* Main section styles 
 main {
     background-color: #CCCCCD;
-    padding-top: 70px; /* Per evitare che l'header copra il contenuto */
+    padding-top: 70px; /* Per evitare che l'header copra il contenuto 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -123,7 +139,7 @@ main {
 }
 
 .main-div {
-    background-color: skyblue; /* solo per distinguerlo dal resto */
+    background-color: skyblue; /* solo per distinguerlo dal resto 
     border-radius: 25px;
     padding: 5vw 5vh;
 }
@@ -131,7 +147,7 @@ main {
 .main-div img{
     max-width: 300px;
     max-height: 500px;
-}
+}*/
 
 /* Footer styles */
 footer {
