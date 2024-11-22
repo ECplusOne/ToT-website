@@ -6,16 +6,38 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Header styles */
 header {
-    background-color: lightslategray;
-    color: black;
-    padding: 10px 0;
-    text-align: center;
+    display: flex;
+    position: fixed; /* Rende l'header fisso */
+    padding: 10px 10px; /* Spaziatura interna */
+    width: 100%; /* Occupa tutta la larghezza */
+    height: 100px; /* Altezza dell'header */
+    align-items: center; /* Allinea gli elementi verticalmente */
+    justify-content: space-between; /* Distribuisce il menu e il logo */
+    background-color: lightslategray; /* Colore di sfondo */
+    z-index: 100; /* Assicura che sia sopra gli altri contenuti */
 }
 
-header h1 {
-    margin: 0;
+/* Menu button styles */
+.menu-container {
+    display: flex;
+    justify-content: flex-start; /* Assicura che stia a sinistra */
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.4s ease-in-out;
+}
+.menu-container img{width: auto;height: 35px;}
+
+.logo {
+    position: absolute; /* Posizionamento assoluto per centrare il logo */
+    left: 50%;
+    transform: translateX(-50%); /* Mantiene il logo perfettamente centrato */
+}
+
+.logo img {
+    max-height: 100px; /* Assicura che l'immagine non superi l'altezza dell'header */
+    max-width: 120px; /* Limita la larghezza dell'immagine */
+    height: auto;
 }
 
 /* Navbar styles */
@@ -72,19 +94,6 @@ nav ul li a:hover {
 }
 */
 
-/* Menu button styles */
-.menu-container {
-    display: inline-block;
-    cursor: pointer;
-    padding: 10px 10px;
-    transition: transform 0.4s ease-in-out;
-}
-
-.menu-container img{
-    width: 30px;
-    height: 30px;
-}
-
 .rotate{
     /* Rotation animation for menu button on click */
     transform: rotate(90deg);
@@ -104,6 +113,7 @@ nav ul li a:hover {
 /* Main section styles */
 main {
     background-color: #CCCCCD;
+    padding-top: 70px; /* Per evitare che l'header copra il contenuto */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
